@@ -1,0 +1,37 @@
+export const movies = [
+  {
+    id: 1,
+    title: "The Shawshank Redemption",
+    director: "Frank Darabont",
+    year: 1994,
+    genre: "Drama",
+  },
+  {
+    id: 2,
+    title: "The Godfather",
+    director: "Francis Ford Coppola",
+    year: 1972,
+    genre: "Crime",
+  },
+  {
+    id: 3,
+    title: "The Dark Knight",
+    director: "Christopher Nolan",
+    year: 2008,
+    genre: "Action",
+  },
+  {
+    id: 4,
+    title: "Pulp Fiction",
+    director: "Quentin Tarantino",
+    year: 1994,
+    genre: "Crime",
+  },
+  {
+    id: 5,
+    title: "The Lord of the Rings: The Return of the King",
+    director: "Peter Jackson",
+    year: 2003,
+    genre: "Fantasy",
+  },
+];
