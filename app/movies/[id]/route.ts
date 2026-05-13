@@ -28,7 +28,7 @@ export async function PATCH(_req: Request, { params }: Props) {
       director: updateDirector,
       year: updateYear,
       genre: updateGenre,
-    }),
+    }),00
     { status: 200 },
   );
 }
