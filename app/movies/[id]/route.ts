@@ -38,8 +38,8 @@ export async function PATCH(_req: Request, { params }: Props) {
 export async function GET(request: NextRequest) {
   const { searchParams } =request.nextUrl.searchParams;
   const query = searchParams.get("query") || "";
-  const filteredMovies = movies.filter((movie) =>
-    movie.title.toLowerCase().includes(query.toLowerCase()),
+  const filteredMovies = movies.filter((m) =>
+    m.title.toLowerCase().includes(query.toLowerCase()),
   );
   return new Response(JSON.stringify(filteredMovies), { status: 200 }); 
   
