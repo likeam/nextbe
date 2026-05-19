@@ -1,3 +1,4 @@
+import { NextRequest, typeNextRequest } from 'next/server.js';
 import { movies } from "../db";
 export async function GET(_req: Request, { params }: Props) {
   const { id } = await params;
@@ -31,4 +32,15 @@ export async function PATCH(_req: Request, { params }: Props) {
     }),00
     { status: 200 },
   );
+}
+
+
+export async function GET(request: NextRequest) {
+  const { searchParams } =request.nextUrl.searchParams;
+  const query = searchParams.get("query") || "";
+  const filteredMovies = movies.filter((movie) =>
+    movie.title.toLowerCase().includes(query.toLowerCase()),
+  );
+  return new Response(JSON.stringify(filteredMovies), { status: 200 }); 
+  
 }
